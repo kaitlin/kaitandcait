@@ -110,6 +110,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
+    'django.contrib.markup',
+    'django.contrib.humanize',
+    'django.contrib.syndication',
+    'articles',
+
     # Uncomment the next line to enable the admin:
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -138,6 +143,17 @@ LOGGING = {
         },
     }
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+                                "django.contrib.auth.context_processors.auth",
+                                "django.core.context_processors.i18n",
+                                "django.core.context_processors.media",
+                                "django.core.context_processors.request",
+
+                                )
+
+DISQUS_USER_API_KEY = "o1RLEgTL2Oc4uKWxnuGYZbLueMPE8lSD2WZK5JlBvLbaS6I2Xp8pA6BRqLCZtfeB"
+DISQUS_FORUM_SHORTNAME = "kaitlinandcaitlininthemorningatnight"
 
 try:
     from local_settings import *

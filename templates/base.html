@@ -2,9 +2,14 @@
 <html>
     <head>
         <title>{% block title %} {% endblock title %}</title>
-    </head>
-    <body>
-        {% block content %}{% endblock content %}
+        {% block meta-keywords %}{% endblock %}
+        {% block meta-description %}{% endblock %}
+        {% block extra-head %}{% endblock %}
 
+    </head>
+    <body style="background-color:#18343e;">
+       {% block content %}{% endblock content %}
+    
+        {% block footer %}{% endblock footer %}
     </body>
 </html>
