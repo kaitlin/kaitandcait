@@ -49,11 +49,11 @@ MEDIA_URL = '/assets/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = PROJECT_ROOT + '/static/'
+STATIC_ROOT = PROJECT_ROOT + '/static/staticfiles/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/assets/'
+STATIC_URL = '/assets/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -114,7 +114,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.contrib.syndication',
     'articles',
-
+    'podcast',
     # Uncomment the next line to enable the admin:
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
