@@ -1,15 +1,17 @@
-<!HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-        <title>{% block title %} {% endblock title %}</title>
-        {% block meta-keywords %}{% endblock %}
-        {% block meta-description %}{% endblock %}
-        {% block extra-head %}{% endblock %}
-
-    </head>
-    <body style="background-color:#18343e;">
-       {% block content %}{% endblock content %}
-    
-        {% block footer %}{% endblock footer %}
-    </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>{% block title %} {% endblock title %}</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.35">
+  <style type="text/css">
+    body {background-color: #18343e}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+  </style>
+</head>
+<body>
+<p class="p1">{% block meta-keywords %}{% endblock %} {% block meta-description %}{% endblock %} {% block extra-head %}{% endblock %} {% block content %}{% endblock content %} {% block footer %}Toes{% endblock footer %}</p>
+</body>
 </html>
