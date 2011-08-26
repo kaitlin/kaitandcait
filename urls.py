@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from podcast.views import LatestEntriesFeed
+from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
