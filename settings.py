@@ -1,3 +1,5 @@
+DEBUG=True
+
 # Django settings for myproject project.
 import os
 
@@ -91,10 +93,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'kaitandcait.urls'
-
+INTERNAL_IPS = ('127.0.0.1',)
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -119,6 +122,7 @@ INSTALLED_APPS = (
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
      'django.contrib.admindocs',
+     'debug_toolbar',
 )
 
 # A sample logging configuration. The only tangible logging
