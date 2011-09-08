@@ -1,0 +1,160 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+        outline: 0;
+}
+body {
+        line-height: 1;
+        color: black;
+        background: white;
+}
+ol, ul {
+        list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+        border-collapse: separate;
+        border-spacing: 0;
+}
+caption, th, td {
+        text-align: left;
+        font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+        content: "";
+}
+blockquote, q {
+        quotes: "" "";
+}
+
+
+
+body{
+	color: #d5d6d7;
+	font-family: 'Neuton', serif;
+	font-weight: 200;
+	background: url('/assets/img/bg_body.png') center top repeat #18343e;
+}
+
+.wrapper{
+	width: 960px;	
+	margin: 0 auto;
+}
+
+.content{
+	width: 544px;
+	margin-left: 235px;
+	background: #142e37;
+	padding: 30px;
+	-webkit-box-shadow: inset 0 2px 6px 1px #0e252d;
+	-moz-box-shadow: inset 0 2px 6px 1px #0e252d;
+	box-shadow: inset 0 2px 6px 1px #0e252d;
+	margin-bottom: 60px
+}
+
+h2{
+	font-size: 150%;
+	font-weight: 400;
+	color: #bab807;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px #142d29;
+	filter: dropshadow(color=#3b2f02, offx=2, offy=2);
+	letter-spacing: 2px;
+	margin-bottom: 30px
+}
+
+h1.logo{
+	background: url("/assets/img/kandc_logo.png");
+	width: 850px;
+	height: 248px;
+	text-indent: -9999em;
+}
+audio{
+	margin-bottom: 30px;
+}
+
+h3, h3 a{
+	font-size: 120%;
+	text-decoration: none;
+	color: #02a4e0;
+}
+
+p{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	line-height: 1.6;
+	margin-bottom: 30px
+}
+
+p.p1{
+	margin-bottom: 0;
+}
+
+li {
+	line-height: 1.6;
+}
+.quiet{
+	border-bottom: 1px solid #629aab;
+	margin-bottom: 30px;
+	color: #496d79;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 85%
+
+}
+.timestamp{
+	background-color: red;
+}
+
+footer{
+	background: url('/assets/img/bg_footer.png') center top repeat;
+	min-height: 120px;
+	display: block;
+	-webkit-box-shadow: inset 0 2px 6px 1px #0e252d;
+	-moz-box-shadow: inset 0 2px 6px 1px #0e252d;
+	box-shadow: inset 0 2px 6px 1px #0e252d;
+	padding: 30px 0;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

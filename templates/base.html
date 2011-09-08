@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -6,12 +6,24 @@
   <title>{% block title %} {% endblock title %}</title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1038.35">
-  <style type="text/css">
-    body {background-color: #18343e}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+  <style type="text/css">    
   </style>
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Neuton:200,300,400,700,800,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<p class="p1">{% block meta-keywords %}{% endblock %} {% block meta-description %}{% endblock %} {% block extra-head %}{% endblock %} {% block content %}{% endblock content %} {% block footer %}Toes{% endblock footer %}</p>
+<div class="wrapper">
+  <h1 class="logo">Kaitlin and Caitlin <span>In the Morning at Night</span></h1>
+  <div class="content">
+
+  <p class="p1">{% block meta-keywords %}{% endblock %} {% block meta-description %}{% endblock %} {% block extra-head %}{% endblock %} {% block content %}{% endblock content %} {% block footer %}{% endblock footer %}</p>
+  </div>
+
+</div>
+  <footer>
+    <div class="wrapper">
+    Content and such!
+    </div>
+  </footer>
 </body>
 </html>

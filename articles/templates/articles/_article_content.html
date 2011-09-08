@@ -14,6 +14,10 @@
             <span class="attachment-size">Size: {{ att.attachment.size|filesizeformat }}</span>
         </li>
     {% if forloop.last %}</ul>
-</div>{% endif %}
+</div>
+
+{% block meta-keywords %}{{ article.keywords|escape }}{% endblock %}
+
+{% endif %}
 {% endfor %}
 
