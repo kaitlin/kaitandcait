@@ -1,30 +1,20 @@
 {% load i18n humanize %}
 
-<div id="article-meta">
-    <h4>Meta</h4>
-
-    <p><strong>{% trans 'Published' %}</strong>: {{ article.publish_date|naturalday }}</p>
-
-    <p><strong>{% trans 'Author' %}</strong>: <a href="{% url articles_by_author article.author.username %}" title="{% trans 'Read other articles by this author' %}">{{ article.author.get_name }}</a></p>
-
-    <p><strong>{% trans 'Comments' %}</strong>: <a href="#disqus_thread">&nbsp;</a></p>
-
-    <p><strong>{% trans 'Word Count' %}</strong>: {{ article.word_count|intcomma }}</p>
-
+<div id="article-meta"
     {% if article.get_next_article %}
-    <p>
+    <p class="next">
         <strong>{% trans 'Next' %}</strong>:
         <a href="{{ article.get_next_article.get_absolute_url }}">{{ article.get_next_article.title }}</a>
     </p>
     {% endif %}
 
     {% if article.get_previous_article %}
-    <p>
+    <p class="previous">
         <strong>{% trans 'Previous' %}</strong>:
         <a href="{{ article.get_previous_article.get_absolute_url }}">{{ article.get_previous_article.title }}</a>
     </p>
     {% endif %}
-
+    <div class="clear"></div>
     {% if article.use_addthis_button and article.addthis_username %}
     <!-- AddThis Button BEGIN -->
     <div>
@@ -35,11 +25,12 @@
     <!-- AddThis Button END -->
     {% endif %}
 
-    <script type="application/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+    <!-- <script type="application/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script> -->
 
-    <h4>{% trans 'Tags' %}</h4>
-    <p>{% if article.tags.count %}{% for tag in article.tags.all %}<a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a> {% endfor %}{% else %}None{% endif %}</p>
-
+    <h4 class="tagTitle">{% trans 'Tags' %}</h4>
+        <ul class="tags">
+             <li>{% if article.tags.count %}{% for tag in article.tags.all %}<a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a> {% endfor %}{% else %}None{% endif %}</ul>
+         </ul>
     {% for fu in article.followups.live %}
     {% if forloop.first %}<h4 class="hasfollowup-header">{% trans 'Follow-Up Articles' %}</h4>
 
