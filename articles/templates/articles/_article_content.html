@@ -6,15 +6,11 @@
 </div>
 
 {% for att in article.attachments.all %}
-{% if forloop.first %}<div id="article-attachments">
-    <h3>Attachments</h3>
-    <ul>{% endif %}
-        <li id="attachment-{{ forloop.counter }}" class="attachment ct_{{ att.content_type_class }}">
-            <a href="{{ att.attachment.url }}" class="attachment-link">{{ att.filename }}</a>
-            <span class="attachment-size">Size: {{ att.attachment.size|filesizeformat }}</span>
-        </li>
-    {% if forloop.last %}</ul>
-</div>
+{% if forloop.first %}
+        <h4>{{att.filename}} - {{att.attachment.size|filesizeformat}}</h4>
+<!--        <audio src="{{att.attachment.url}}" type="audio/mp3" controls />-->
+        <div id="player"></div>
+        <script type="text/javascript">AudioPlayer.embed("player", {soundFile: "{{att.attachment.url}}"});  </script>
 
 {% block meta-keywords %}{{ article.keywords|escape }}{% endblock %}
 
