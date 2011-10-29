@@ -1,3 +1,7 @@
 *.pyc
 local_settings.py
-
+*.json
+build/
+*.DS_Store
+.bash_profile
+manage.py
