@@ -5,7 +5,7 @@
             <div class="quiet">
             {% trans 'Posted on' %} {{ article.publish_date|date:"F jS, Y" }}
             {% trans 'by' %} <a href="{% url articles_by_author article.author.username %}" title="{% trans 'View articles posted by' %} {{ article.author.get_name }}">{{ article.author.get_name }}</a>
-          </div>
+            </div>
         
             {{article.content|safe}}    
         
