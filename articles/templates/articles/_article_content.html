@@ -11,11 +11,12 @@
 
 {% for att in article.attachments.all %}
 {% if forloop.first %}
+        <div class="media">
         <h4>{{att.filename}} - {{att.attachment.size|filesizeformat}}</h4>
 <!--        <audio src="{{att.attachment.url}}" type="audio/mp3" controls />-->
         <div id="player"></div>
         <script type="text/javascript">AudioPlayer.embed("player", {soundFile: "{{att.attachment.url}}"});  </script>
-
+        </div>
 
 {% endif %}
 {% endfor %}
