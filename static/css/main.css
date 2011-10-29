@@ -200,16 +200,32 @@ footer{
 	margin-bottom: 5px;
 }
 
+footer li a{
+	padding-left: 40px;
+	padding-bottom: 4px;
 
+}
 .dateEtc{
 	margin-bottom: 20px;
 	display: block
 }
+.contact{
+	background: url('/assets/img/footer_line.png') right top repeat-y;
+	padding-right: 30px;
+	width: 120px;
 
-
-
-
-
+}
+.copyright{
+	font-style: italic;
+	font-size: 80%;
+	float: right;
+}
+.twitter{
+	background: url('/assets/img/twitter_newbird_white.png') left 4px no-repeat;
+}
+.rss{
+	background: url('/assets/img/rss.png') 3px top no-repeat;
+}
 
 
 
