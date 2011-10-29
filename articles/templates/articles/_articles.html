@@ -8,8 +8,18 @@
             </div>
         
             {{article.content|safe}}    
-        
             
+            {% for att in article.attachments.all %}
+                {% if forloop.first %}
+                    <h4>{{att.filename}} - {{att.attachment.size|filesizeformat}}</h4>
+<!--        <audio src="{{att.attachment.url}}" type="audio/mp3" controls />-->
+                    <div id="player"></div>
+                    <script type="text/javascript">AudioPlayer.embed("player", {soundFile: "{{att.attachment.url}}"});  </script>
+
+                {% endif %}
+            {% endfor %}
+       
+
 
     </li>
 {% if forloop.last %}</ul>{% endif %}
