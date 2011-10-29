@@ -5,9 +5,12 @@
 
 
 {% block articles-content %}
-<h2 class="title">{% trans 'Recorded yesterday, posted today, listened to RIGHT NOW!' %}</h2>{% ifnotequal paginator.num_pages 1 %}, {% trans 'page' %} {{ page_obj.number }}{% endifnotequal %}
+<h2 class="title">{% trans 'Recorded yesterday, posted today, listened to RIGHT NOW!' %}</h2>
 
+{% ifnotequal paginator.num_pages 1 %}, {% trans 'page' %} {{ page_obj.number }}{% endifnotequal %}
+<div class="theList">
 {% for article in page_obj.object_list %}
 {% include 'articles/_articles.html' %}
 {% endfor %}
 {% endblock %}
+</div>
