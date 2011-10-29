@@ -191,10 +191,11 @@ footer{
 	margin-bottom: 30px;
 }
 
-
-
-
-
+#dsq-content{
+	background: url('/assets/img/bg_disqus.png') center top no-repeat;
+	margin-top: 20px;
+	padding-top: 40px;
+}
 
 
 
