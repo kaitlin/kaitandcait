@@ -1,10 +1,10 @@
 {% load i18n humanize %}
 <div id="article-content" class="article">
     <h2 class="title">{% trans article.title %}</h2>
-    {% trans 'Published' %}: {{ article.publish_date|naturalday }}
+    <span class="dateEtc">{% trans 'Published' %}: {{ article.publish_date|naturalday }}
 
     {% trans 'Author' %}: <a href="{% url articles_by_author article.author.username %}" title="{% trans 'Read other articles by this author' %}">{{ article.author.get_name }}</a>
-
+    </span>
 
     {{ article.rendered_content|safe }}
 
