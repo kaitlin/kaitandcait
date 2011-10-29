@@ -1,23 +1,21 @@
 {% load i18n humanize %}
 <div id="article-content" class="article">
     <h2 class="title">{% trans article.title %}</h2>
-    {% trans 'Published' %}: {{ article.publish_date|naturalday }}
+    <span class="dateEtc">{% trans 'Published' %}: {{ article.publish_date|naturalday }}
 
     {% trans 'Author' %}: <a href="{% url articles_by_author article.author.username %}" title="{% trans 'Read other articles by this author' %}">{{ article.author.get_name }}</a>
-
+    </span>
 
     {{ article.rendered_content|safe }}
-</div>
+
 
 {% for att in article.attachments.all %}
 {% if forloop.first %}
-        <div class="media">
         <h4>{{att.filename}} - {{att.attachment.size|filesizeformat}}</h4>
 <!--        <audio src="{{att.attachment.url}}" type="audio/mp3" controls />-->
         <div id="player"></div>
         <script type="text/javascript">AudioPlayer.embed("player", {soundFile: "{{att.attachment.url}}"});  </script>
-        </div>
 
 {% endif %}
 {% endfor %}
-
+</div>
